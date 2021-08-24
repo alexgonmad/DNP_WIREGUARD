@@ -254,6 +254,10 @@ if [ -n "$PEERS" ]; then
   else
     echo "**** External server address is set to $SERVERURL ****"
   fi
+
+  # Exit if SERVERURL not set
+  [ -z "$SERVERURL" ] && { echo "**** ERROR: External server address not found at my.dappnode/global-envs/HOSTNAME ****"; exit 1}
+
   SERVERPORT=${SERVERPORT:-51820}
   echo "**** External server port is set to ${SERVERPORT}. Make sure that port is properly forwarded to port 51820 inside this container ****"
   INTERNAL_SUBNET=${INTERNAL_SUBNET:-10.13.13.0}
