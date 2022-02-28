@@ -9,9 +9,12 @@
   "links": {
     "homepage": "https://github.com/dappnode/DNP_WIREGUARD"
   },
+  "bugs": {
+    "url": "https://github.com/dappnode/DNP_WIREGUARD/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dappnode/DNP_WIREGUARD"
+    "url": "https://github.com/dappnode/DNP_WIREGUARD.git"
   },
-  "license": "GLP-3.0"
+  "license": "GPL-3.0"
 }
