@@ -265,7 +265,7 @@ if [ -n "$PEERS" ]; then
     fi
 
     if [ -z "$SERVERURL" ]; then
-        echo "**** SERVERURL var is either not set or is set to \"auto\" ****"
+        echo "**** SERVERURL var is either not set or is set to \"auto\", setting external IP to auto detected value of $SERVERURL  ****"
     else
         echo "**** SERVERURL var is set to $SERVERURL ****"
     fi
