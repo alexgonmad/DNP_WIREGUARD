@@ -24,7 +24,11 @@ export async function createLocalConfigFile(device: string): Promise<string> {
 // Utils
 
 async function getLocalIp(): Promise<string> {
-  const urls = params.DAPPNODE_API_URLS_GET_INTERNAL_IP;
+
+  const hostnames = params.DAPPMANAGER_HOSTNAMES;
+  const endpoint = params.GET_INTERNAL_API_ENDPOINT;
+
+  const urls = hostnames.map(hostname => `http://${hostname}${endpoint}`);
 
   for (const url of urls) {
     try {
